@@ -1,0 +1,55 @@
+ROBERT CASTEEL
+
+Makefile
+galactus.c
+typescript
+README
+hello.c
+test.c
+SyscallScreenshot.png
+
+Extra credit:
+1)
+What other signal has this property? (cannot be caught or ignored)
+a: SIGSTOP
+q: Which signals will terminate the program if left unhandled?
+a: 
+
+Terminate:
+SIGHUP, SIGINT, SIGPIPE, SIGALRM, SIGTERM, SIGUSR1, SIGUSR2, SIGPOLL, SIGPROF, SIGVTALRM, SIGEMT, SIGSTKFLT, SIGIO, SIGPWR, SIGLOST.
+
+Core dump and Termination:
+SIGQUIT, SIGILL, SIGABRT, SIGFPE, SIGSEGV, SIGBUS, SIGSYS, SIGTRAP, SIGXCPU, SIGXFSZ, SIGIOT, SIGUNUSED.
+
+q: Which man page has this information?
+a: signal(7)
+
+
+Compilation instructions:
+Makefile compiles only the shell (galactus)
+
+
+Overiew of work accomplished:
+I believe I have accomplished everything from Project 1 including one extra credit problem. My shell is named after the ficitonal cosmic entity-- Galactus, who is from The Fantastic Four Marvel comicbook series. Galactus eats planets.
+
+Description of code:
+galactus.c : shell, see comments
+hello.c : contains syscall, was compiled into linux image
+test.c : tests my hello syscall, returned 0
+
+General comments:
+I used execvp, which will search in bin if no / appears in the command agrument.
+
+Number of hours spend on the project: 
+over 15
+
+
+sources: 
+http://techeclipse.com/how-to/linux-kernel/
+man pages
+http://geoffgarside.co.uk/2009/08/28/using-execve-for-the-first-time/
+http://www.cplusplus.com/forum/general/29032/
+http://www.cs.kent.edu/~farrell/sp/lectures/signals/use-alarms.c
+http://stackoverflow.com/questions/5769734/what-are-the-different-versions-of-exec-used-for-in-c
+http://linux.die.net/man/7/environ
+http://linux.die.net/man/3/exec 

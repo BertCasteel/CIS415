@@ -1,0 +1,24 @@
+Script started on Fri 25 Apr 2014 02:08:49 AM PDT
+]0;cis415@cis415-desktop: ~/Desktopcis415@cis415-desktop:~/Desktop$ gcc test.c
+]0;cis415@cis415-desktop: ~/Desktopcis415@cis415-desktop:~/Desktop$ cat test.c
+#include <stdio.h>
+#include <sys/syscall.h>
+#include <linux/kernel.h>
+#include <unistd.h>
+#define __NR_hello 337
+long hello_syscall(void)
+{
+	return syscall(__NR_hello);
+}
+int main(int arc, char* argv[])
+{
+	long int a = hello_syscall();
+	printf("System call return %ld\n", a);
+	return 0;
+}
+]0;cis415@cis415-desktop: ~/Desktopcis415@cis415-desktop:~/Desktop$ ./a.out 
+System call return 0
+]0;cis415@cis415-desktop: ~/Desktopcis415@cis415-desktop:~/Desktop$ exit
+exit
+
+Script done on Fri 25 Apr 2014 02:09:18 AM PDT
